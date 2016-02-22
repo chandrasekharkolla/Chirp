@@ -6,6 +6,8 @@ gem 'rails', '4.2.5'
 
 gem 'rspec-rails'
 # Use SCSS for stylesheets
+gem 'bootstrap-sass'
+gem 'sprockets'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -22,7 +24,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+gem 'guard-rspec'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -50,3 +52,9 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end 
+
+group :test do
+  gem 'selenium-webdriver'
+end
+
+gem 'capybara'
