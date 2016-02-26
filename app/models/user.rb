@@ -10,4 +10,6 @@ class User < ActiveRecord::Base
 
 	validates :password, length: { minimum: 6 }
 	validates :mobile_number, length: { minimum: 10, maximum: 10}
+	geocoded_by :location
+	after_validation :geocode
 end

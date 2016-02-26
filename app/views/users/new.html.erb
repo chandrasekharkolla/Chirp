@@ -25,6 +25,9 @@
       <%= f.label :password_confirmation, "Confirm Password" %>
       <%= f.password_field :password_confirmation, placeholder: "Confirm Password", class: 'form-control' %>
 
+      <%= f.label :location %>
+      <%= f.text_field :location, placeholder: "Location", class: 'form-control' %>
+
       <%= f.submit "Create my account", class: "btn btn-lg btn-primary" %>
     <% end %>
   </div>
