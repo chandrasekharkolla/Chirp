@@ -29,6 +29,7 @@ gem 'guard-rspec'
 gem 'bcrypt', '~> 3.1.7'
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'koala', '~> 2.2'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
