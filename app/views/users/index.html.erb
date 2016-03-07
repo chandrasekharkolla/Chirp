@@ -1,6 +1,7 @@
-<div class="row">
+<div class="col-md-8">
 	<% @users.each do |i| %>
-		<%= link_to "#{i.first_name} #{i.last_name}", user_path(i) %>
+		<h1><%= link_to image_tag(i.image.url(:small), class: 'img-circle'), user_path(i) %>
+		<%= link_to "#{i.first_name} #{i.last_name}", user_path(i) %></h1>
 		<br />
 	<% end %>
 </div>

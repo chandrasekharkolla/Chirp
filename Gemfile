@@ -30,7 +30,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'koala', '~> 2.2'
-
+gem 'paperclip', '~> 4.3', '>= 4.3.5'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

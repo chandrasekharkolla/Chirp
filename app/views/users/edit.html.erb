@@ -1,9 +1,9 @@
-<% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
+<% provide(:title, 'Edit User') %>
+<h1>Edit Your Deatails</h1>
 
 <div class="row">
   <div class="span6 offset3 col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
+    <%= form_for(@user, :html => { :method => :put}) do |f| %>
 
       <%= render 'shared/error_messages' %>
 
@@ -30,7 +30,7 @@
       <%= f.label :location %>
       <%= f.text_field :location, placeholder: "Location", class: 'form-control' %>
 
-      <%= f.submit "Create my account", class: "btn btn-lg btn-primary" %>
+      <%= f.submit "Update my account", class: "btn btn-lg btn-primary" %>
     <% end %>
   </div>
 </div>
