@@ -33,6 +33,7 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
+    @random_users = User.where.not(id: @user).order("RANDOM()")
   end
 
   def edit

@@ -12,6 +12,6 @@ class User < ActiveRecord::Base
 	validates :mobile_number, length: { minimum: 10, maximum: 10}
 	geocoded_by :location
 	after_validation :geocode
-	has_attached_file :image, styles: { medium: "300x300#", small: "100x100" }
-    validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+	has_attached_file :image, styles: { medium: "750x550#", small: "100x100#" }
+  	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 end

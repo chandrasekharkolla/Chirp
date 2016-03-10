@@ -1,17 +1,22 @@
 <% provide(:title, @user.first_name) %>
-<div class="row">
-  <aside class="span4">
-    <section>
-      <h1>
-        <%= image_tag @user.image.url(:medium) %>
-        <br />
-        <br />
-        <%= @user.first_name %>
-        <%= @user.last_name %>
-      </h1>
-    </section>
-  </aside>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <%= image_tag @user.image.url(:medium) %>
+      <p>
+        <b>
+          <%= @user.first_name %>
+          <%= @user.last_name %>
+        </b>
+      </p>
+    </div>
+    <div class="pull-right">
+      <% (0..3).each do |i| %>
+        <%= link_to image_tag(@random_users[i].image.url(:small), class: 'img-circle'), user_path(@random_users[i]) %>
+        <p><%= link_to @random_users[i].first_name, user_path(@random_users[i]) %></p>
+      <% end %>
+    </div>
+  </div>
 </div>
-
 <%= link_to "Edit", edit_user_path(@user) %>
 <%= link_to "Home", root_path %>

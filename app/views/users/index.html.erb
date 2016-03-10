@@ -1,7 +1,10 @@
-<div class="col-md-8">
-	<% @users.each do |i| %>
-		<h1><%= link_to image_tag(i.image.url(:small), class: 'img-rounded'), user_path(i) %>
-		<%= link_to "#{i.first_name} #{i.last_name}", user_path(i) %></h1>
-		<br />
-	<% end %>
+<div class="container-fluid">   
+  <!-- <div class="row"> -->
+    <div class="center-block"> 
+    	<% @users.each do |i| %>
+    		<%= link_to image_tag(i.image.url(:small), class: 'img-rounded img-responsive'), user_path(i) %>
+        <%= link_to i.first_name, user_path(i) %>
+    	<% end %>
+    </div>
+  <!-- </div> -->
 </div>
